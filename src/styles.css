@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
 
 :root { --ink: #18342b; --muted: #748078; --line: #e6e4dc; --paper: #f7f5ef; --white: #fffefa; --green: #1d4b3a; --green-soft: #e5efe7; --coral: #e87961; --yellow: #f5cd76; --shadow: 0 15px 35px rgba(35, 53, 44, .07); font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--paper); }
+.club-home-brand { display: inline-flex; align-items: center; }.club-logo { display: block; width: 58px; height: 58px; object-fit: contain; }.home-footer .club-logo { width: 48px; height: 48px; }.auth-brand .club-logo { width: 64px; height: 64px; }.dashboard-brand .club-logo { width: 56px; height: 56px; }
 * { box-sizing: border-box; }
 body { margin: 0; min-width: 320px; background: var(--paper); }
 button, input, select { font: inherit; }

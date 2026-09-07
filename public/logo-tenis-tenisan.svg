@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Tenis Tenisan 2024</title>
+  <desc id="desc">Green circular tennis club emblem with a lime tennis ball and leaf detail.</desc>
+  <defs>
+    <path id="topArc" d="M 92 236 A 168 168 0 0 1 420 236" />
+    <path id="bottomArc" d="M 86 302 A 174 174 0 0 0 426 302" />
+  </defs>
+  <circle cx="256" cy="256" r="221" fill="#004d37" stroke="#004d37" stroke-width="5" />
+  <circle cx="256" cy="256" r="204" fill="none" stroke="#fff" stroke-width="7" />
+  <circle cx="256" cy="256" r="194" fill="none" stroke="#fff" stroke-width="3" />
+  <text fill="#fff" font-family="Arial, sans-serif" font-size="45" font-weight="700" letter-spacing="10"><textPath href="#topArc" startOffset="50%" text-anchor="middle">TENIS</textPath></text>
+  <text fill="#fff" font-family="Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="3"><textPath href="#bottomArc" startOffset="50%" text-anchor="middle">TENISAN</textPath></text>
+  <text x="86" y="271" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="700">20</text>
+  <text x="395" y="271" fill="#fff" font-family="Arial, sans-serif" font-size="29" font-weight="700">24</text>
+  <path d="M 142 198 C 183 151 245 166 278 202 C 307 234 355 241 381 222 C 355 274 310 304 254 306 C 200 308 157 276 142 198 Z" fill="#b7e900" />
+  <path d="M 149 202 C 197 197 217 233 254 253 C 296 277 342 263 373 230" fill="none" stroke="#004d37" stroke-width="8" stroke-linecap="round" />
+  <path d="M 155 286 C 205 307 256 278 306 294 C 342 305 360 330 357 353" fill="none" stroke="#004d37" stroke-width="8" stroke-linecap="round" />
+  <path d="M 353 178 C 379 211 383 267 355 339" fill="none" stroke="#004d37" stroke-width="8" stroke-linecap="round" />
+  <path d="M 355 212 C 386 210 400 223 410 240 C 385 237 368 231 355 212 Z M 357 250 C 386 254 397 268 401 284 C 379 275 365 267 357 250 Z M 356 291 C 379 301 384 316 382 331 C 365 319 358 307 356 291 Z" fill="#004d37" />
+  <path d="M 248 359 C 282 351 317 351 349 365 C 319 381 278 388 241 381 Z" fill="#b7e900" />
+</svg>
