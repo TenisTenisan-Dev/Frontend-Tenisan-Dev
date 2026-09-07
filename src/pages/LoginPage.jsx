@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, LockKeyhole, Mail } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ClubLogo from '../components/ClubLogo';
+import LanguageSelect from '../components/LanguageSelect';
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export default function LoginPage() {
   return (
     <div className="auth-page">
       <div className="auth-visual"><Link className="home-brand auth-brand club-home-brand" to="/"><ClubLogo /></Link><div className="auth-visual-copy"><p className="home-kicker">Welcome back</p><h1>Your next<br /><em>rally awaits.</em></h1><p>Step back on court and keep building the game you want to play.</p></div><span className="auth-visual-number">02 / 04</span></div>
-      <main className="auth-card"><Link className="back-link" to="/"><ArrowLeft size={15} /> Back to home</Link><div className="auth-form-wrap"><p className="home-kicker">Member area</p><h2>Log in to Tenis Tenisan</h2><p className="auth-subtitle">Access your classes, bookings, and progress.</p><form onSubmit={handleSubmit}><label>Email address<div className="input-wrap"><Mail size={16} /><input type="email" placeholder="you@example.com" required /></div></label><label>Password<div className="input-wrap"><LockKeyhole size={16} /><input type="password" placeholder="Enter your password" required /></div></label><div className="form-row"><label className="checkbox-label"><input type="checkbox" /> Remember me</label><a href="#forgot">Forgot password?</a></div><button className="auth-submit" type="submit">Continue <ArrowRight size={16} /></button></form><p className="auth-switch">New to Tenis Tenisan? <a href="#register">Create an account</a></p></div></main>
+        <main className="auth-card"><div className="auth-language"><LanguageSelect /></div><Link className="back-link" to="/"><ArrowLeft size={15} /> Back to home</Link><div className="auth-form-wrap"><p className="home-kicker">Member area</p><h2>Log in to Tenis Tenisan</h2><p className="auth-subtitle">Access your classes, bookings, and progress.</p><form onSubmit={handleSubmit}><label>Email address<div className="input-wrap"><Mail size={16} /><input type="email" placeholder="you@example.com" required /></div></label><label>Password<div className="input-wrap"><LockKeyhole size={16} /><input type="password" placeholder="Enter your password" required /></div></label><div className="form-row"><label className="checkbox-label"><input type="checkbox" /> Remember me</label><a href="#forgot">Forgot password?</a></div><button className="auth-submit" type="submit">Continue <ArrowRight size={16} /></button></form><p className="auth-switch">New to Tenis Tenisan? <a href="#register">Create an account</a></p></div></main>
     </div>
   );
 }

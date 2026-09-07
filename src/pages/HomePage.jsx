@@ -1,13 +1,24 @@
 import { ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import ClubLogo from '../components/ClubLogo';
+import LanguageSelect from '../components/LanguageSelect';
 
 export default function HomePage() {
+  const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'id');
+  const isIndonesian = language === 'id';
+
+  useEffect(() => {
+    const updateLanguage = () => setLanguage(localStorage.getItem('language') || 'id');
+    window.addEventListener('languagechange', updateLanguage);
+    return () => window.removeEventListener('languagechange', updateLanguage);
+  }, []);
+
   return (
     <div className="home-page">
       <header className="home-nav">
         <a className="home-brand club-home-brand" href="#top" aria-label="Tenis Tenisan home"><ClubLogo /></a>
-        <nav className="home-links" aria-label="Public navigation"><a href="#programs">Programs</a><a href="#coaches">Coaches</a><a href="#club">The club</a></nav>
-        <div className="home-nav-actions"><a className="home-login" href="/login">Member login</a><a className="home-cta" href="/login?redirect=booking">Book a class <ChevronRight size={15} /></a></div>
+        <nav className="home-links" aria-label="Public navigation"><a href="#programs">{isIndonesian ? 'Program' : 'Programs'}</a><a href="#coaches">{isIndonesian ? 'Pelatih' : 'Coaches'}</a><a href="#club">{isIndonesian ? 'Tentang klub' : 'The club'}</a></nav>
+        <div className="home-nav-actions"><LanguageSelect /><a className="home-login" href="/login">{isIndonesian ? 'Login member' : 'Member login'}</a><a className="home-cta" href="/login?redirect=booking">{isIndonesian ? 'Booking kelas' : 'Book a class'} <ChevronRight size={15} /></a></div>
       </header>
 
       <main id="top">
