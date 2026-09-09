@@ -1,0 +1,20 @@
+{
+  "name": "Tenis Tenisan Club",
+  "short_name": "Tenis Tenisan",
+  "description": "Booking coaching class dan pengalaman tenis Tenis Tenisan Club.",
+  "lang": "id-ID",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f5ef",
+  "theme_color": "#004d37",
+  "icons": [
+    {
+      "src": "/logo-tenis-tenisan.png",
+      "sizes": "768x768",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
