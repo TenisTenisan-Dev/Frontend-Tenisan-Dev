@@ -50,10 +50,14 @@ section[id] { scroll-margin-top: 84px; }
 @media (max-width: 480px) { .home-cta { padding: 10px 11px; }.home-hero-actions { flex-wrap: wrap; gap: 16px; }.home-proof { margin-top: 42px; }.program-grid { grid-template-columns: 1fr; }.program-card { min-height: 255px; }.coach-photo { width: 145px; height: 190px; }.coach-one { left: 3%; }.coach-two { left: 30%; }.coach-caption { right: 2%; }.home-footer { font-size: 8px; } }
 
 .home-menu-backdrop { display: none; }
-.home-drawer-close, .home-links > p { display: none; }
+.home-drawer-brand, .home-drawer-close, .home-links > p { display: none; }
 @media (max-width: 800px) {
+	.home-nav > .home-brand { display: none; }
+	.home-menu-button { order: 0; }
 	.home-menu-backdrop { display: block; position: fixed; inset: 0; z-index: 55; border: 0; background: rgba(24,52,43,.28); }
-	.home-links.is-open { display: flex; position: fixed; z-index: 60; inset: 0 auto 0 0; width: min(300px, 82vw); height: 100vh; margin: 0; padding: 30px 20px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; border: 0; border-radius: 0; background: #e9f0e8; box-shadow: 10px 0 30px rgba(30,50,40,.16); }
+	.home-links.is-open { display: flex; position: fixed; z-index: 60; inset: 0 auto 0 0; width: min(300px, 82vw); height: 100vh; margin: 0; padding: 28px 20px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; border: 0; border-radius: 0; background: #e9f0e8; box-shadow: 10px 0 30px rgba(30,50,40,.16); }
+	.home-links.is-open .home-drawer-brand { display: block; width: 64px; margin: 0 0 20px 10px; }
+	.home-links.is-open .home-drawer-brand .club-logo { width: 64px; height: 64px; }
 	.home-links.is-open .home-drawer-close { display: grid; place-items: center; align-self: flex-end; width: 34px; height: 34px; border: 0; border-radius: 6px; background: transparent; color: #789082; margin-bottom: 44px; }
 	.home-links.is-open > p { display: block; color: #86a092; font-size: 9px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; margin: 0 12px 12px; }
 	.home-links.is-open a { display: flex; align-items: center; color: #557263; font-size: 15px; font-weight: 600; padding: 15px 13px; border: 0; border-radius: 7px; }
