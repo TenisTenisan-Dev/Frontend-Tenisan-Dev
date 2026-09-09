@@ -1,10 +1,11 @@
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import ClubLogo from '../components/ClubLogo';
 import LanguageSelect from '../components/LanguageSelect';
 
 export default function HomePage() {
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'id');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isIndonesian = language === 'id';
 
   useEffect(() => {
@@ -17,7 +18,9 @@ export default function HomePage() {
     <div className="home-page">
       <header className="home-nav">
         <a className="home-brand club-home-brand" href="#top" aria-label="Tenis Tenisan home"><ClubLogo /></a>
-        <nav className="home-links" aria-label="Navigasi utama"><a href="#programs">Program</a><a href="#schedule">Jadwal</a><a href="#coaches">Coaches</a><a href="#booking">Booking</a><a href="#about">Tentang</a></nav>
+        <button className="home-menu-button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Buka menu navigasi" aria-expanded={mobileMenuOpen}>{mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}<span>Menu</span></button>
+        <nav className={`home-links ${mobileMenuOpen ? 'is-open' : ''}`} aria-label="Navigasi utama"><button className="home-drawer-close" onClick={() => setMobileMenuOpen(false)} aria-label="Tutup menu"><X size={19} /></button><p>Menu utama</p><a href="#programs" onClick={() => setMobileMenuOpen(false)}>Program</a><a href="#schedule" onClick={() => setMobileMenuOpen(false)}>Jadwal</a><a href="#coaches" onClick={() => setMobileMenuOpen(false)}>Coaches</a><a href="#booking" onClick={() => setMobileMenuOpen(false)}>Booking</a><a href="#about" onClick={() => setMobileMenuOpen(false)}>Tentang</a></nav>
+        {mobileMenuOpen && <button className="home-menu-backdrop" onClick={() => setMobileMenuOpen(false)} aria-label="Tutup navigasi" />}
         <div className="home-nav-actions"><LanguageSelect /><a className="home-login" href="/login">{isIndonesian ? 'Login member' : 'Member login'}</a><a className="home-cta" href="/login?redirect=booking">{isIndonesian ? 'Booking kelas' : 'Book a class'} <ChevronRight size={15} /></a></div>
       </header>
 
